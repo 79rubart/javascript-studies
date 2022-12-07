@@ -8,15 +8,29 @@
     </head>
     <body>
         
-    <p>A convenção que usaremos para criar nosso programa é adotar letras minúsculas e não usar acentos e, claro, usar a extensão .html.</p>
-    <br>
-    <p>Outro ponto importante é que toda alteração feita no arquivo .html deve ser salva e, além disso, o navegador precisa recarregar a página para que a última alteração do arquivo entre em vigor.</p>
+        <p>A convenção que usaremos para criar nosso programa é adotar letras minúsculas e não usar acentos e, claro, usar a extensão .html.</p>
+        <p>Outro ponto importante é que toda alteração feita no arquivo .html deve ser salva e, além disso, o navegador precisa recarregar a página para que a última alteração do arquivo entre em vigor.</p>
     
-    <script>
-        document.write("A soma das idades é " + (20 + 30 + 10) + "<br>");
-        document.write("A média das idades é " + ((20 + 30 + 10)/3) + "<br>");
-        document.write("Concatenando todos os valores até então, teremos " + 60 + " e " + 20);
-    </script>
+        <script>
 
+            function pulaLinha(){
+                document.write("<br><br>");
+            }
+
+            var idadeFlavio = 20;
+            var idadeJoaquim = 30;
+            var idadeBarney = 11;
+            var nome = "Barney";
+            var soma = idadeFlavio + idadeJoaquim + idadeBarney;
+            var media = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
+            document.write("A soma das idades é " + (idadeFlavio + idadeJoaquim + idadeBarney));
+            pulaLinha();
+            document.write("A média das idades é " + Math.round(media));
+            pulaLinha();
+            document.write("Concatenando todos os valores até então, teremos " + soma + " e " + Math.round(media));
+            pulaLinha();
+            idadeBarney = 10;
+            document.write("Há um ano atrás, " + nome + " tinha " + idadeBarney + " anos.");
+        </script>
     </body>
 </html>
