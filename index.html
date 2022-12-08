@@ -14,7 +14,16 @@
         <script>
 
             function pulaLinha(){
-                document.write("<br><br>");
+                document.write("<br><hr><br>");
+            }
+
+            function mostra(frase){
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            }
+
+            function calculaImc(peso, altura){
+                return imc = peso / (altura * altura);
             }
 
             var idadeFlavio = 20;
@@ -22,15 +31,33 @@
             var idadeBarney = 11;
             var nome = "Barney";
             var soma = idadeFlavio + idadeJoaquim + idadeBarney;
-            var media = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
-            document.write("A soma das idades é " + (idadeFlavio + idadeJoaquim + idadeBarney));
-            pulaLinha();
-            document.write("A média das idades é " + Math.round(media));
-            pulaLinha();
-            document.write("Concatenando todos os valores até então, teremos " + soma + " e " + Math.round(media));
-            pulaLinha();
+            var media = soma/3;
+            mostra("A soma das idades é " + soma);
+            mostra("A média das idades é " + Math.round(media));
+            mostra("Concatenando todos os valores até então, teremos " + soma + " e " + Math.round(media));
             idadeBarney = 10;
-            document.write("Há um ano atrás, " + nome + " tinha " + idadeBarney + " anos.");
+            mostra("Há um ano atrás, " + nome + " tinha " + idadeBarney + " anos.");
+
+            var imcFlavio = calculaImc(73, 1.71);
+            var imcJoaquim = calculaImc(90, 1.90);
+            var imcBarney = calculaImc(70, 1.60);
+            var totalImcs = imcFlavio + imcJoaquim + imcBarney;
+            var mediaImcs = totalImcs/3;
+
+            mostra("O valor do IMC de Flavio é " + imcFlavio);
+            mostra("O valor do IMC de Joaquim é " + imcJoaquim);
+            mostra("O valor do IMC de Barney é " + imcBarney);
+            mostra("A soma dos IMCs é: " + totalImcs);
+            mostra("A media dos IMCs é: " + mediaImcs);
+
+            var nomeUsuario = prompt("Fala pipoca, pitbull ta na pixxxta. Qual teu nome, meno?");
+            var pesoUsuario = parseFloat(prompt("Coe " + nomeUsuario + ", ta de xereca? Informa teu peso ai agora paizao"));
+            var alturaUsuario = parseFloat(prompt(nomeUsuario + ", informa tua altura ai viado"));
+            var imcUsuario = calculaImc(pesoUsuario, alturaUsuario);
+            
+            alert("Ih saiu aqui ó, seu imc mostra que tu eh gay kkkkk brinks, seu imc é: " + Math.round(imcUsuario));
+            mostra("O IMC do comédia é: " + Math.round(imcUsuario));
+
         </script>
     </body>
 </html>
