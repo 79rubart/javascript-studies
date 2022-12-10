@@ -26,6 +26,27 @@
                 return imc = peso / (altura * altura);
             }
 
+            function classificaImc(){
+                if (imcUsuario <= 18.5) {
+                    mostra("Seu IMC te classifica como Baixo-Peso");
+                }
+                if (imcUsuario >= 18.6 && imcUsuario <= 24.9){
+                    mostra("Seu IMC te classifica como Peso Normal");
+                }
+                if (imcUsuario >= 25 && imcUsuario <= 29.9){
+                    mostra("Seu IMC te classifica como Sobrepeso");
+                }
+                if (imcUsuario >= 30 && imcUsuario <= 34.9){
+                    mostra("Seu IMC te classifica como Obesidade Grau 1");
+                }
+                if (imcUsuario >= 35 && imcUsuario <= 39.9){
+                    mostra("Seu IMC te classifica como Obesidade Grau 2");
+                }
+                if (imcUsuario >= 40){
+                    mostra("Seu IMC te classifica como Obesidade Grau 3");
+                }
+            }
+
             var idadeFlavio = 20;
             var idadeJoaquim = 30;
             var idadeBarney = 11;
@@ -56,7 +77,8 @@
             var imcUsuario = calculaImc(pesoUsuario, alturaUsuario);
             
             alert("Ih saiu aqui ó, seu imc mostra que tu eh gay kkkkk brinks, seu imc é: " + Math.round(imcUsuario));
-            mostra("O IMC do comédia é: " + Math.round(imcUsuario));
+            mostra("O IMC do comédia chamado "+ nomeUsuario + " é: " + Math.round(imcUsuario));
+            classificaImc();
 
         </script>
     </body>
