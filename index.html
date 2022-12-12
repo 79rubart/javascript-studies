@@ -4,13 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Principal</title>
     </head>
     <body>
+
+        <h1>Clique em um dos botões para ir a um dos programas:</h1>
+        <a href="bmc.html"><button>Calculadora IMC</button></a>
+        <a href="guess.html"><button>Adivinhe o número</button></a>
         
         <p>A convenção que usaremos para criar nosso programa é adotar letras minúsculas e não usar acentos e, claro, usar a extensão .html.</p>
         <p>Outro ponto importante é que toda alteração feita no arquivo .html deve ser salva e, além disso, o navegador precisa recarregar a página para que a última alteração do arquivo entre em vigor.</p>
-    
+        
         <script>
 
             function pulaLinha(){
@@ -26,33 +30,13 @@
                 return imc = peso / (altura * altura);
             }
 
-            function classificaImc(){
-                if (imcUsuario <= 18.5) {
-                    mostra("Seu IMC te classifica como Baixo-Peso");
-                }
-                if (imcUsuario >= 18.6 && imcUsuario <= 24.9){
-                    mostra("Seu IMC te classifica como Peso Normal");
-                }
-                if (imcUsuario >= 25 && imcUsuario <= 29.9){
-                    mostra("Seu IMC te classifica como Sobrepeso");
-                }
-                if (imcUsuario >= 30 && imcUsuario <= 34.9){
-                    mostra("Seu IMC te classifica como Obesidade Grau 1");
-                }
-                if (imcUsuario >= 35 && imcUsuario <= 39.9){
-                    mostra("Seu IMC te classifica como Obesidade Grau 2");
-                }
-                if (imcUsuario >= 40){
-                    mostra("Seu IMC te classifica como Obesidade Grau 3");
-                }
-            }
-
             var idadeFlavio = 20;
             var idadeJoaquim = 30;
             var idadeBarney = 11;
             var nome = "Barney";
             var soma = idadeFlavio + idadeJoaquim + idadeBarney;
             var media = soma/3;
+            mostra("Flávio tem 20 anos, Joaquim tem 30 e Barney tem 11");
             mostra("A soma das idades é " + soma);
             mostra("A média das idades é " + Math.round(media));
             mostra("Concatenando todos os valores até então, teremos " + soma + " e " + Math.round(media));
@@ -70,15 +54,6 @@
             mostra("O valor do IMC de Barney é " + imcBarney);
             mostra("A soma dos IMCs é: " + totalImcs);
             mostra("A media dos IMCs é: " + mediaImcs);
-
-            var nomeUsuario = prompt("Fala pipoca, pitbull ta na pixxxta. Qual teu nome, meno?");
-            var pesoUsuario = parseFloat(prompt("Coe " + nomeUsuario + ", ta de xereca? Informa teu peso ai agora paizao"));
-            var alturaUsuario = parseFloat(prompt(nomeUsuario + ", informa tua altura ai viado"));
-            var imcUsuario = calculaImc(pesoUsuario, alturaUsuario);
-            
-            alert("Ih saiu aqui ó, seu imc mostra que tu eh gay kkkkk brinks, seu imc é: " + Math.round(imcUsuario));
-            mostra("O IMC do comédia chamado "+ nomeUsuario + " é: " + Math.round(imcUsuario));
-            classificaImc();
 
         </script>
     </body>
