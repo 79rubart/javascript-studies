@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br><hr><br>");
+        }
+
+        function mostra(frase){
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+
+        function calculaImc(peso, altura){
+            return imc = peso / (altura * altura);
+        }
+
+        function classificaImc(){
+            if (imcUsuario <= 18.5) {
+                mostra("Seu IMC te classifica como Baixo-Peso");
+            }
+            if (imcUsuario >= 18.6 && imcUsuario <= 24.9){
+                mostra("Seu IMC te classifica como Peso Normal");
+            }
+            if (imcUsuario >= 25 && imcUsuario <= 29.9){
+                mostra("Seu IMC te classifica como Sobrepeso");
+            }
+            if (imcUsuario >= 30 && imcUsuario <= 34.9){
+                mostra("Seu IMC te classifica como Obesidade Grau 1");
+            }
+            if (imcUsuario >= 35 && imcUsuario <= 39.9){
+                mostra("Seu IMC te classifica como Obesidade Grau 2");
+            }
+            if (imcUsuario >= 40){
+                mostra("Seu IMC te classifica como Obesidade Grau 3");
+            }
+        }
+
+        var nomeUsuario = prompt("Fala pipoca, pitbull ta na pixxxta. Qual teu nome, meno?");
+        var pesoUsuario = parseFloat(prompt("Coe " + nomeUsuario + ", ta de xereca? Informa teu peso ai agora paizao"));
+        var alturaUsuario = parseFloat(prompt(nomeUsuario + ", informa tua altura ai viado"));
+        var imcUsuario = calculaImc(pesoUsuario, alturaUsuario);
+        
+        alert("Ih saiu aqui ó, seu imc mostra que tu eh gay kkkkk brinks, seu imc é: " + Math.round(imcUsuario));
+        mostra("O IMC do comédia chamado "+ nomeUsuario + " é: " + Math.round(imcUsuario));
+        classificaImc();
+
+    </script>
+</body>
+</html>
